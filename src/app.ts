@@ -15,6 +15,10 @@ const app = express();
 
 app.use(cors());
 
+app.get('/', (req, res)=>{
+  res.send({status:'Ok',response:'The Restaurant-recipe Api is working'})
+})
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

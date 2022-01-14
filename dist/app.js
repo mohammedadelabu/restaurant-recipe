@@ -16,6 +16,9 @@ const recipe_1 = __importDefault(require("./routes/recipe"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
+app.get('/', (req, res) => {
+    res.send({ status: 'Ok', response: 'The Restaurant-recipe Api is working' });
+});
 app.use((0, morgan_1.default)('dev'));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
