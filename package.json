@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "CI= node ./bin/index.js",
-    "dev": "tsc && nodemon ./bin/index.js",
+    "start": "node ./bin/index",
+    "dev": "tsc && nodemon ./bin/index",
     "build": "yarn tsc",
     "test": "jest",
     "test:watch": "jest --watch",
