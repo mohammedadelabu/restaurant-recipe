@@ -4,9 +4,12 @@
   "description": "",
   "scripts": {
     "start": "CI= node ./bin/index.js",
+    "dev": "tsc && nodemon ./bin/index.js",
     "build": "yarn tsc",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "clean": "rm -rf dist && mkdir dist",
+    "heroku-postbuild": "yarn clean && yarn build"
   },
   "keywords": [],
   "author": "",
