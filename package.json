@@ -4,7 +4,6 @@
   "description": "",
   "scripts": {
     "start": "CI= node ./bin/index.js",
-    "dev": "tsc && nodemon ./bin/index.js",
     "build": "yarn tsc",
     "test": "jest",
     "test:watch": "jest --watch"
