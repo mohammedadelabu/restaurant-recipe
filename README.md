@@ -1,17 +1,13 @@
-# week-9-node
+This is a food recipe management app. This app will help it's users to manage food recipes.
 
-## 1. Implement this task using MongoDB
+## 1. I Implemented this app using MongoDB
 
 ### Setup
 
-1. Your are required to use `TypeScript` for the task and build the APIs (endpoints) with `express`
-2. Use and setup the project with `Yarn`
+1. I used `TypeScript` for the task and build the APIs (endpoints) with `express`
+2. I Used and setup the project with `Yarn`
 
-## Problem Description:
-
-Your task is to build a food recipe management app. This app will help it's users to management food recipes.
-
-Your recipe data structure looks like the following:
+My recipe data structure looks like the following:
 
 ```
  {
@@ -32,7 +28,7 @@ Your recipe data structure looks like the following:
 ```
 
 Additional Info:
-Your database should have the following collection
+My database have the following collection
 
 - recipe_collection
 
@@ -51,7 +47,7 @@ Your database should have the following collection
   - created_At
   - updated_At
 
-### Endpoints to Implement and test
+### The Endpoints I Implemented and tested are the following:
 
 | Method | Endpoint           | Enable a user to:                       |
 | :----- | :----------------- | :-------------------------------------- |
@@ -65,27 +61,24 @@ Your database should have the following collection
 | DELETE | /recipes/:recipeId | To delete a recipe by id                |
 
 ## Clarification
+I implemented the following:
 
-- implement pagination, with limit of 5 values for each page
-- Create Authentication and Authorization for users using a middleware function
-- Implement Validation for incoming request using Joi
+-  pagination, with limit of 5 values for each page
+-  Authentication and Authorization for users using a middleware function
+-  Validation for incoming request using Joi
 - Only registered users can access all recipes endpoint
-- Use mongoDB-compass for local development
+- I used mongoDB-compass for local development
 
-## Test coverage (Test is mandatory - no test equals 0 (zero) marks):
+## Test coverage 
 
-- Make sure you write test to cover your application using supertest
-- Test your database using mongodb-memory-server
-- Test all endpoints (GET, POST, PUT, DELETE)
+- I wrote test to cover my application using supertest
+- I tested my database using mongodb-memory-server
+- I tested all endpoints (GET, POST, PUT, DELETE)
 
 ## Documentation
 
-- document your API with postman
+- I documented my API with postman
 
 ## Hosting
 
-- Host your application on Heroku
-
-## 2. Mongo Aggregation Exercise.
-
-- Go through the readme file `MongoAggregation.md`
+- I hosted my application on Heroku
