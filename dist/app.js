@@ -21,14 +21,14 @@ app.set('views', 'views');
 app.use((0, cors_1.default)());
 app.get('/', (req, res) => {
     // res.send({status:'Ok',response:'The Restaurant-recipe Api is working'})
-    res.status(404).sendFile(path_1.default.join(__dirname, 'views', '404.html'));
+    res.status(200).sendFile(path_1.default.join(__dirname, '../views', '404.html'));
 });
 app.use((0, morgan_1.default)('dev'));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
 app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use((0, cookie_parser_1.default)());
-app.use(express_1.default.static(path_1.default.join(__dirname, 'public')));
+app.use(express_1.default.static(path_1.default.join(__dirname, '/public')));
 app.use('/api/auth', auth_1.default);
 app.use('/api/recipes', recipe_1.default);
 // connect db
