@@ -2,6 +2,7 @@ import createError, { HttpError } from 'http-errors';
 import express, { NextFunction, Request, Response } from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
 import logger from 'morgan'
 import cors from 'cors';
 import dotenv from "dotenv";
@@ -13,15 +14,20 @@ dotenv.config()
 
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
 app.use(cors());
 
 app.get('/', (req, res)=>{
-  res.send({status:'Ok',response:'The Restaurant-recipe Api is working'})
+  // res.send({status:'Ok',response:'The Restaurant-recipe Api is working'})
+  res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 })
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
