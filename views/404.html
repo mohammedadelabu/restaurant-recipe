@@ -147,6 +147,146 @@
           background-color: #00695c;
           color: white;
         }
+
+        @media screen and (max-width:800px){
+          * {
+          box-sizing: border-box;
+        }
+
+        body {
+          padding: 0;
+          margin: 0;
+          font-family: "Open Sans", sans-serif;
+        }
+        .h1class {
+          font-family: cursive;
+          font-weight: bolder;
+          font-size: larger;
+          text-decoration: solid;
+          text-align: center;
+          text-emphasis: 10;
+        }
+        .h1class-p {
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+          text-decoration: solid;
+          text-align: center;
+          text-emphasis: 10;
+        }
+
+        .centered {
+          border-color: black;
+          font-family: "Times New Roman", Times, serif;
+          font-size: larger;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .bottom {
+          position: absolute;
+          bottom: 8px;
+          right: 16px;
+        }
+        main {
+          padding: 1rem;
+          margin: auto;
+        }
+
+        .main-header {
+          width: 100%;
+          height: 3.5rem;
+          background-color: saddlebrown;
+          padding: 0 1.5rem;
+        }
+
+        .main-header__nav {
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+
+        .main-header__item-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+        }
+
+        .main-header__item {
+          margin: 0 1rem;
+          padding: 0;
+        }
+
+        .main-header__item a {
+          text-decoration: none;
+          color: rgb(207, 24, 24);
+        }
+
+        .main-header__item a:hover,
+        .main-header__item a:active,
+        .main-header__item a.active {
+          color: rgb(2, 241, 62);
+        }
+
+        .grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: stretch;
+        }
+
+        .card {
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+        }
+
+        .card__header,
+        .card__content {
+          padding: 1rem;
+        }
+
+        .card__header h1,
+        .card__content h1,
+        .card__content h2,
+        .card__content p {
+          margin: 0;
+        }
+
+        .card__image {
+          width: 100%;
+        }
+
+        .card__image img {
+          width: 100%;
+        }
+
+        .card__actions {
+          padding: 1rem;
+          text-align: center;
+        }
+
+        .card__actions button,
+        .card__actions a {
+          margin: 0 0.25rem;
+        }
+
+        .btn {
+          font: inherit;
+          border: 1px solid #00695c;
+          color: #00695c;
+          background: white;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+
+        .btn:hover,
+        .btn:active {
+          background-color: #00695c;
+          color: white;
+        }
+    
+  }
       </style>
     </head>
   </head>
