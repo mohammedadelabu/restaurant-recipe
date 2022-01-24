@@ -20,7 +20,6 @@ app.set('views', 'views');
 app.use(cors());
 
 app.get('/', (req, res)=>{
-  // res.send({status:'Ok',response:'The Restaurant-recipe Api is working'})
   res.status(200).sendFile(path.join(__dirname, '../views', '404.html'));
 })
 
@@ -29,7 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/api/auth', authRoute);
 app.use('/api/recipes', recipeRoute);
