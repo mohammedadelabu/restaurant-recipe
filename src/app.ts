@@ -7,6 +7,8 @@ import logger from 'morgan'
 import cors from 'cors';
 import dotenv from "dotenv";
 import { connectDB,connectTestDB} from "./database/memory"
+import indexRouter from './routes/index';
+
 
 import authRoute from './routes/auth';
 import recipeRoute from './routes/recipe';
@@ -19,10 +21,12 @@ const app = express();
 
 app.use(cors());
 
-app.get('/', (req, res)=>{
-  // res.status(200).sendFile(path.join(__dirname, '../views', '404.html'));
-  res.render('404');
-})
+// app.get('/', (req, res)=>{
+//   res.status(200).sendFile(path.join(__dirname, '../views', '404.html'));
+//   // res.status(200).render('404', { pageTitle: 'Landing Page', path: '/404' });
+
+//   // res.render('404');
+// })
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -33,6 +37,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/api/auth', authRoute);
 app.use('/api/recipes', recipeRoute);
+app.use('/', indexRouter);
 
 
 // connect db
