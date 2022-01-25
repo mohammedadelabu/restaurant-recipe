@@ -14,13 +14,14 @@ dotenv.config()
 
 const app = express();
 
-app.set('view engine', 'ejs');
-app.set('views', 'views');
+// app.set('view engine', 'ejs');
+// app.set('views', 'views');
 
 app.use(cors());
 
 app.get('/', (req, res)=>{
-  res.status(200).sendFile(path.join(__dirname, '../views', '404.html'));
+  // res.status(200).sendFile(path.join(__dirname, '../views', '404.html'));
+  res.render('404');
 })
 
 app.use(logger('dev'));
